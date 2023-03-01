@@ -3,6 +3,7 @@ package com.alpesh.costom_button;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -17,6 +18,11 @@ public class MainActivity extends AppCompatActivity {
 
         txtSubmit = findViewById(R.id.textSubmit);
 
-        Toast.makeText(this, "Submit Complete", Toast.LENGTH_SHORT).show();
+        txtSubmit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(MainActivity.this, "Submit", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }
